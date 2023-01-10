@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/CSS/su_kien_nho.css">
+
+    <title>Su_kien</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <nav class="container">
+            <a href="Home_page_final.html" id="logo">
+                <img src="/images/logo-am-nhac.png" alt="Nhachay.vn">
+            </a>
+            <ul id="main-menu">
+                <li><a href="">Kinds</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Rock</a></li>
+                        <li><a href="">Pop</a></li>
+                        <li><a href="">Jazz</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Top 100</a>
+                    <ul class="sub-menu">
+                        <li><a href="top_100_US_UK.html">Best US UK Songs</a></li>
+                        <li><a href="">Best Asian Songs</a></li>
+                    </ul>
+                <li><a href="">Artists</a></li>
+                <li><a href="">New Released</a></li>
+                <input type="text" id="InputSearch" placeholder="Search" title="Type in a name of Song,Singger">
+                <ul id="ulsearch">
+
+                    <li><a href="top_100_US_UK.html">Dancing Queen- <i> ABBA</i></a></li>
+                    <li><a href="happy%20new%20year.html">Happy New Year- <i>ABBA</i></a></li>
+
+                </ul>
+            </ul>
+        </nav>
+    </div>
+<div class="tatca">
+  <div class="tieu_de">
+    <h2>(VTC News) - The Festival Council is one of the biggest music festivals at the end of the year when it lasts up to 10 hours, with 10,000 guests and a line-up of 24 artists.</h2>
+  </div>
+  <div class="noi_dung">
+    <p>With the theme "Colorful painting from fragments", the program will be written like a story book with 6 acts with positive messages. Each act will be a separate color, a different story led through music from 6 groups of artists.</p>
+  </div>
+  <div class="picture">
+    <img src="/img/su_kien_con.jpg" alt="">
+  </div>
+  <div class="noi_dung_1">Not only gathering famous rap, indie and underground names bearing the spirit of the Council such as Ca Salmon Hoang, Sweet, The Flob, Hoang Dung, CAM, Kien, this year's show also features Karik's appearance. , Only C, B Ray, Lou Hoang, MONO…</div>
+  <div class="noi_dung_2"><br> It is noteworthy that the name MONO, Son Tung M-TP's younger brother, after only 3 months of debut, the male singer born in 2000 is proving more and more attractive. Mono herself also admitted that she couldn't believe it when she became a phenomenon after only 3 months of singing with the hit "Waiting For You". The male singer was invited to attend many big shows, shared the stage with famous names.</div>
+<div class="picture2">
+  <img src="/img/mono.jpeg" alt="">
+</div>
+<div class="noi_dung_3">
+  <p>Council Music Festival 2022 will take place on November 26 at the SECC Saigon Exhibition and Convention Center (District 7, HCMC).</p>
+</div>
+<div class="noi_dung_4"><h4>Minh Dang-Vinh Phuc Newspaper</h4></div>
+</div>
+
+    
+    <div id="footer">
+        <div class="sub-foot">
+            <p><b>INFOMATION</b></p>
+            <p>Zing Gruop 4 Co., Ltd</p>
+            <p>Add: No 300 Lang Ha Streer, Cau Giay District, Ha Noi, Vietnam</p>
+            <p>Tel: 0123456789</p>
+            <p>Fax: 222-33-5555-888</p>
+        </div>
+        <div class="sub-foot">
+            <p><b>CONTACT WITH US THROUGH</b></p>
+            <div class="sub-foot1">
+                <img src="images/t_ic_facebook.png">
+                <a href="#">www.facebook.com/Zing4</a>
+            </div>
+
+            <div class="sub-foot1">
+                <img src="images/t_ic_zalo.png" width="64" height="64">
+                <a href="#">www.zalo.com/Zing4</a></div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sub-menu').parent('li').addClass('has-child');
+    });
+</script>
+<script>
+    // Declare a var to get information inputted in the Search Box
+    var input = document.getElementById("InputSearch");
+    // Define a function
+    function FilterFunction() {
+        var filter, ul, li, a, i;
+        // Get values users find
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("ulsearch");
+        li = ul.getElementsByTagName("li");
+        // if threre is not a result,choose " display : none"
+        if (!filter) {
+            ul.style.display = "none";
+        }else{
+            // Loop over all tags "i" conntaining the result
+            for (i = 0; i < li.length; i++) {
+                // get tag "a" in the tag "li"
+                a = li[i].getElementsByTagName("a")[0];
+                // Checking if inputted value is in the content of tag "a"
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    //if yes,display ul  tag and li tag
+                    ul.style.display = "block";
+                    li[i].style.display = "";
+                } else {
+                    //if not, hide tag "li"
+                    li[i].style.display = "none";
+
+                }
+            }
+        }
+    }
+    //Point the event to input
+    input.addEventListener("keyup", FilterFunction);
+</script>
+</body>
